@@ -2,465 +2,1717 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hazel's Organics — Whole Body Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  <title>Hazels Organics — Organic Sea Moss, Herbs & Plant-Based Wellness</title>
-  <meta name="description" content="Organic sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. Wildcrafted, third-party tested. Founded by Kid Hazel.">
-  <meta name="keywords" content="sea moss, organic, herbs, wellness, plant-based, vegan, sea moss gummies, tongkat ali, horny goat weed, Kid Hazel, hazels organics">
-  <meta name="author" content="Hazels Organics">
-  <link rel="canonical" href="https://hazelsorganics.com/">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
+    :root {
+      --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hazelsorganics.com/">
-  <meta property="og:title" content="Hazels Organics — Organic Sea Moss & Plant-Based Wellness">
-  <meta property="og:description" content="Sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. Sourced clean. Made simple.">
-  <meta property="og:image" content="https://hazelsorganics.com/images/product-front.png">
-  <meta property="og:site_name" content="Hazels Organics">
+      --color-bg: #ffffff;
+      --color-fg: #000000;
+      --color-fg-secondary: rgba(0,0,0,0.7);
+      --color-border: rgba(0,0,0,0.1);
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hazels Organics — Organic Sea Moss & Plant-Based Wellness">
-  <meta name="twitter:description" content="Sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. Sourced clean. Made simple.">
-  <meta name="twitter:image" content="https://hazelsorganics.com/images/product-front.png">
+      --color-primary-btn-bg: #E3F6A4;
+      --color-primary-btn-text: #000000;
+      --color-secondary-btn-bg: #EBEBEB;
+      --color-secondary-btn-text: #000000;
 
-  <!-- Schema.org structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Hazels Organics",
-    "url": "https://hazelsorganics.com",
-    "description": "Organic sea moss, herbs, and plant-based wellness products. Founded by Kid Hazel.",
-    "foundedBy": {
-      "@type": "Person",
-      "name": "Kid Hazel",
-      "alternateName": "Ahmar Bailey"
-    },
-    "knowsAbout": ["Sea Moss", "Organic Herbs", "Plant-Based Wellness", "Holistic Health"]
-  }
-  </script>
+      --color-footer-bg: #0B2A1B;
+      --color-footer-fg: #ffffff;
+      --color-footer-fg-secondary: rgba(255,255,255,0.7);
+      --color-footer-secondary-btn-bg: #19402D;
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Horny Sea Moss Gummies",
-    "description": "Sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. 15 gummies, 8 servings.",
-    "image": "https://hazelsorganics.com/images/product-front.png",
-    "brand": { "@type": "Brand", "name": "Hazels Organics" },
-    "offers": {
-      "@type": "Offer",
-      "price": "45.00",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": "https://hazelsorganics.com/#shop"
-    },
-    "additionalProperty": [
-      { "@type": "PropertyValue", "name": "Servings", "value": "8" },
-      { "@type": "PropertyValue", "name": "Count", "value": "15 gummies" },
-      { "@type": "PropertyValue", "name": "Ingredients", "value": "Sea Moss, Orange, Carrot, Tongkat Ali, Horny Goat Weed, Coconut Sugar" },
-      { "@type": "PropertyValue", "name": "Certifications", "value": "Made in USA, GMP, Vegan, Gluten-Free" }
-    ]
-  }
-  </script>
+      --color-marquee-bg: #BCD8CB;
 
-  <link rel="stylesheet" href="css/styles.css">
+      --color-badge-new: rgb(95,177,173);
+      --color-badge-sale: rgb(196,48,28);
+      --color-badge-bestseller: rgb(115,146,113);
+
+      --btn-radius: 6rem;
+      --card-radius: 2rem;
+      --input-radius: 6rem;
+
+      --container: 1400px;
+      --gutter: clamp(1.25rem, 4vw, 2.5rem);
+      --ease-smooth: cubic-bezier(0.3, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--color-bg);
+      color: var(--color-fg);
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
+    h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; }
+    .container { max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
+    .text-logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      color: inherit;
+    }
+
+    /* ===== SUBHEADING ===== */
+    .subheading {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-fg-secondary);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: capitalize;
+      padding: 0 2rem;
+      height: 50px;
+      border-radius: var(--btn-radius);
+      transition: all 0.35s var(--ease-smooth);
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+    .btn--primary {
+      background: var(--color-primary-btn-bg);
+      color: var(--color-primary-btn-text);
+    }
+    .btn--primary:hover { filter: brightness(0.95); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(227,246,164,0.4); }
+    .btn--primary:active { transform: translateY(0) scale(0.97); box-shadow: none; }
+    .btn--secondary {
+      background: var(--color-secondary-btn-bg);
+      color: var(--color-secondary-btn-text);
+    }
+    .btn--secondary:hover { background: #e0e0e0; transform: translateY(-1px); }
+    .btn--secondary:active { transform: translateY(0) scale(0.97); }
+    .btn--white {
+      background: #fff;
+      color: #000;
+    }
+    .btn--white:hover { background: #f5f5f5; }
+    .btn--small { height: 42px; padding: 0 1.5rem; font-size: 0.8rem; }
+    .btn--outline {
+      background: transparent;
+      border: 1px solid var(--color-border);
+      color: var(--color-fg);
+    }
+
+    /* ===== MARQUEE ===== */
+    .marquee {
+      background: var(--color-marquee-bg);
+      padding: 1.1rem 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      animation: marquee-scroll 20s linear infinite;
+      width: max-content;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-shrink: 0;
+    }
+    .marquee-item h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      transition: background 0.5s var(--ease-smooth), box-shadow 0.5s var(--ease-smooth);
+    }
+    .nav--scrolled {
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--color-border);
+    }
+    .nav-logo.text-logo {
+      color: #fff;
+      transition: color 0.5s var(--ease-smooth);
+    }
+    .nav--scrolled .nav-logo.text-logo { color: var(--color-fg); }
+    .nav-logo img {
+      height: 26px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      transition: filter 0.5s var(--ease-smooth);
+    }
+    .nav--scrolled .nav-logo img { filter: none; }
+    .nav-center { display: flex; gap: 2.25rem; align-items: center; }
+    .nav-center a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: rgba(255,255,255,0.85);
+      transition: color 0.4s var(--ease-smooth), opacity 0.4s var(--ease-smooth);
+      position: relative;
+    }
+    .nav-center a:hover { color: #fff; }
+    .nav-center a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.3s var(--ease-smooth);
+    }
+    .nav-center a:hover::after { width: 100%; }
+    .nav--scrolled .nav-center a { color: var(--color-fg); opacity: 0.6; }
+    .nav--scrolled .nav-center a:hover { opacity: 1; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-right a, .nav-right button {
+      color: rgba(255,255,255,0.85);
+      transition: color 0.4s var(--ease-smooth);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .nav-right a:hover, .nav-right button:hover { color: #fff; }
+    .nav--scrolled .nav-right a,
+    .nav--scrolled .nav-right button { color: var(--color-fg); opacity: 0.7; }
+    .nav--scrolled .nav-right a:hover,
+    .nav--scrolled .nav-right button:hover { opacity: 1; }
+    .nav-cart { position: relative; display: flex; align-items: center; }
+    .nav-cart svg { width: 22px; height: 22px; }
+    .nav-cart-count {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background: var(--color-primary-btn-bg);
+      color: #000;
+      font-size: 0.6rem;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .nav-search svg { width: 20px; height: 20px; }
+    .nav-toggle { display: none; width: 24px; height: 18px; position: relative; z-index: 101; }
+    .nav-toggle span {
+      display: block; width: 100%; height: 1.5px; background: #fff;
+      border-radius: 2px; position: absolute; left: 0;
+      transition: all 0.35s var(--ease-smooth);
+    }
+    .nav--scrolled .nav-toggle span { background: #000; }
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    .nav-toggle span:nth-child(3) { bottom: 0; }
+    .nav-toggle.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 99; background: #fff;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem;
+      opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease-smooth);
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: auto; }
+    .mobile-menu a {
+      font-family: var(--font-heading); font-size: 2rem; color: var(--color-fg);
+      opacity: 0; transform: translateY(20px); transition: all 0.5s var(--ease-smooth);
+    }
+    .mobile-menu.open a { opacity: 1; transform: translateY(0); }
+    .mobile-menu.open a:nth-child(1) { transition-delay: 0.05s; }
+    .mobile-menu.open a:nth-child(2) { transition-delay: 0.1s; }
+    .mobile-menu.open a:nth-child(3) { transition-delay: 0.15s; }
+    .mobile-menu.open a:nth-child(4) { transition-delay: 0.2s; }
+
+    /* ===== HERO CAROUSEL ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-slide.active { opacity: 1; z-index: 1; }
+    .hero-slide.active .hero-content .subheading {
+      animation: heroFadeUp 0.8s var(--ease-smooth) 0.2s both;
+    }
+    .hero-slide.active .hero-content h1 {
+      animation: heroFadeUp 0.9s var(--ease-smooth) 0.35s both;
+    }
+    .hero-slide.active .hero-content .btn {
+      animation: heroFadeUp 0.8s var(--ease-smooth) 0.55s both;
+    }
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-slide.active img {
+      animation: heroZoom 6s var(--ease-smooth) forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to { transform: scale(1.12); }
+    }
+    .hero-slide img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 var(--gutter);
+    }
+    .hero-content .subheading {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.5rem;
+    }
+    .hero-content h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .hero-content h1 em {
+      font-style: normal;
+      font-weight: 400;
+      font-family: var(--font-heading);
+    }
+    .hero-dots {
+      position: absolute;
+      bottom: 5.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 6;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .hero-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      padding: 0;
+    }
+    .hero-dot.active { background: #fff; }
+
+    /* ===== SECTION SHARED ===== */
+    .section { padding: 5rem 0; }
+    .section--lg { padding: 6rem 0; }
+    .section-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
+    .section-header h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 0.75rem; }
+    .section-header p { color: var(--color-fg-secondary); line-height: 1.7; font-size: 0.95rem; }
+    .section-header .subheading { margin-bottom: 0.75rem; display: block; }
+
+    /* ===== PRODUCT TABS ===== */
+    .tabs { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 2.5rem; }
+    .tab-btn {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.88rem;
+      padding: 0.6rem 1.8rem;
+      border-radius: var(--btn-radius);
+      background: transparent;
+      color: var(--color-fg-secondary);
+      border: 1px solid var(--color-border);
+      transition: all 0.3s var(--ease-smooth);
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--color-fg);
+      color: #fff;
+      border-color: var(--color-fg);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ===== PRODUCT GRID ===== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .product-card {
+      position: relative;
+      transition: transform 0.5s var(--ease-smooth);
+    }
+    .product-card:hover { transform: translateY(-6px); }
+    .product-card-media {
+      position: relative;
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: #f5f5f5;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: box-shadow 0.5s var(--ease-smooth);
+    }
+    .product-card:hover .product-card-media {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+    }
+    .product-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s var(--ease-smooth), transform 0.7s var(--ease-smooth);
+    }
+    .product-card:hover .product-card-media img { transform: scale(1.03); }
+    .product-card-media img.hover-img {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+    .product-card:hover .product-card-media img.hover-img { opacity: 1; transform: scale(1.03); }
+    .product-card:hover .product-card-media img.primary-img { opacity: 0; }
+    .product-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.72rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--btn-radius);
+      color: #fff;
+    }
+    .product-badge--sale { background: var(--color-badge-sale); }
+    .product-badge--bestseller { background: var(--color-badge-bestseller); }
+    .product-badge--new { background: var(--color-badge-new); }
+    .product-card-info { padding: 0 0.25rem; }
+    .product-card-title {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+    }
+    .product-card-price { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .product-card-price .price {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.88rem;
+    }
+    .product-card-price .compare-price {
+      font-size: 0.82rem;
+      color: var(--color-fg-secondary);
+      text-decoration: line-through;
+    }
+    .product-card .btn { width: 100%; }
+
+    /* ===== COLLECTION HIGHLIGHT (full-width bg swap) ===== */
+    .collection-highlight {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .collection-highlight__images {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.97 / 1;
+    }
+    .collection-highlight__image {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.8s var(--ease-smooth);
+    }
+    .collection-highlight__image.active { opacity: 1; }
+    .collection-highlight__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .collection-highlight__image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      pointer-events: none;
+    }
+    .collection-highlight__content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: clamp(2rem, 5vw, 4rem);
+      z-index: 2;
+    }
+    .collection-highlight__subheading {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.5rem;
+    }
+    .collection-highlight__titles {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .collection-highlight__title {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: color 0.5s var(--ease-smooth);
+      position: relative;
+      display: inline-block;
+      padding: 0.15em 0;
+      text-decoration: none;
+    }
+    .collection-highlight__title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.5s var(--ease-smooth);
+    }
+    .collection-highlight__title.active {
+      color: #fff;
+    }
+    .collection-highlight__title.active::after {
+      width: 100%;
+    }
+    .collection-highlight__desc {
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .collection-highlight__desc-text {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 400px;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.5s var(--ease-smooth);
+    }
+    .collection-highlight__desc-text.active { opacity: 1; }
+
+    /* ===== ICON FEATURES ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+    .feature-item { text-align: center; }
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 1.25rem;
+    }
+    .feature-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .feature-item h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .feature-item p {
+      font-size: 0.88rem;
+      color: var(--color-fg-secondary);
+      line-height: 1.65;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    /* ===== SPLIT SLIDER (Our Favorite Products + Testimonials) ===== */
+    .split-slider {
+      display: flex;
+      min-height: 80vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .split-slider__media {
+      position: relative;
+      width: 55%;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .split-slider__media-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.8s var(--ease-smooth);
+    }
+    .split-slider__media-slide.active { opacity: 1; }
+    .split-slider__media-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .split-slider__product-card {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-footer-bg);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s var(--ease-smooth) 0.15s, transform 0.6s var(--ease-smooth) 0.15s;
+    }
+    .split-slider__media-slide.active .split-slider__product-card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .split-slider__product-thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .split-slider__product-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .split-slider__product-info { flex: 1; min-width: 0; }
+    .split-slider__product-name {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.88rem;
+      color: #fff;
+    }
+    .split-slider__product-price {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+    }
+    .split-slider__product-btn {
+      flex-shrink: 0;
+    }
+    .split-slider__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(2.5rem, 5vw, 5rem);
+    }
+    .split-slider__heading {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-fg-secondary);
+      margin-bottom: 2.5rem;
+    }
+    .split-slider__slides { flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; }
+    .split-slider__content-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.6s var(--ease-smooth);
+      pointer-events: none;
+    }
+    .split-slider__content-slide.active { opacity: 1; pointer-events: auto; position: relative; }
+    .split-slider__quote {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      line-height: 1.4;
+      margin-bottom: 2.5rem;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .split-slider__author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .split-slider__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .split-slider__avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .split-slider__author-name {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 0.2rem;
+    }
+    .split-slider__author-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      color: var(--color-fg-secondary);
+    }
+    .split-slider__author-badge svg { width: 16px; height: 16px; color: var(--color-badge-new); }
+    .split-slider__controls {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .split-slider__counter {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--color-fg-secondary);
+      flex-shrink: 0;
+    }
+    .split-slider__progress {
+      flex: 1;
+      height: 2px;
+      background: var(--color-border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .split-slider__progress-bar {
+      height: 100%;
+      background: var(--color-fg);
+      border-radius: 2px;
+      transition: width 0.4s var(--ease-smooth);
+    }
+    .split-slider__arrows { display: flex; gap: 0.5rem; }
+    .split-slider__arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease-smooth);
+      cursor: pointer;
+      background: transparent;
+    }
+    .split-slider__arrow:hover { border-color: var(--color-fg); background: var(--color-fg); color: #fff; }
+    .split-slider__arrow svg { width: 16px; height: 16px; }
+
+    /* ===== PROGRESS TIMELINE ===== */
+    .progress-timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+    .progress-timeline__blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .timeline-block {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .timeline-block:first-child { padding-top: 0; }
+    .timeline-block:last-child { border-bottom: none; }
+    .timeline-block__progress {
+      width: 2px;
+      background: var(--color-border);
+      flex-shrink: 0;
+      position: relative;
+      align-self: stretch;
+    }
+    .timeline-block__progress::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -3px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-fg);
+    }
+    .timeline-block__content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .timeline-block__badge {
+      display: inline-flex;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--btn-radius);
+      background: #d9ede4;
+      color: #000;
+      width: fit-content;
+    }
+    .timeline-block__title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+    }
+    .timeline-block__text {
+      font-size: 0.88rem;
+      color: var(--color-fg-secondary);
+      line-height: 1.65;
+      max-width: 380px;
+    }
+    .progress-timeline__media {
+      position: sticky;
+      top: 100px;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .progress-timeline__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter-section {
+      position: relative;
+      background: var(--color-marquee-bg);
+      padding: 5rem 0;
+      overflow: hidden;
+    }
+    .newsletter-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .newsletter-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+    .newsletter-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .newsletter-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #fff;
+    }
+    .newsletter-content h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .newsletter-form input {
+      flex: 1;
+      min-width: 0;
+      height: 50px;
+      padding: 0 1.5rem;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: var(--input-radius);
+      background: #fff;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .newsletter-form input::placeholder { color: rgba(0,0,0,0.4); }
+    .newsletter-form input:focus { border-color: rgba(0,0,0,0.4); }
+    .newsletter-form button {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      bottom: 4px;
+      width: 42px;
+      border-radius: 50%;
+      background: var(--color-fg);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+    }
+    .newsletter-form button svg { width: 16px; height: 16px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--color-footer-bg);
+      color: var(--color-footer-fg);
+      padding: 4rem 0 2rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.8fr repeat(3, 1fr);
+      gap: 3rem;
+      padding-bottom: 3rem;
+    }
+    .footer-brand-col {}
+    .footer-logo { margin-bottom: 2rem; }
+    .footer-logo.text-logo { color: var(--color-footer-fg); }
+    .footer-logo img { height: 28px; width: auto; filter: brightness(10); }
+    .footer-brand-text {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      line-height: 1.3;
+      max-width: 320px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.88rem;
+      margin-bottom: 1.25rem;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--color-footer-fg-secondary);
+      padding: 0.3rem 0;
+      transition: color 0.3s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-col p {
+      font-size: 0.85rem;
+      color: var(--color-footer-fg-secondary);
+      line-height: 1.65;
+    }
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 0 0 2rem;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-bottom h5 {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.92rem;
+    }
+    .footer-bottom span {
+      font-size: 0.85rem;
+      color: var(--color-footer-fg-secondary);
+    }
+
+    /* ===== REVEAL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s var(--ease-smooth), transform 0.9s var(--ease-smooth);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0) scale(1) translateX(0); }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d4 { transition-delay: 0.4s; }
+    .reveal-d5 { transition-delay: 0.5s; }
+
+    .reveal--scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.9s var(--ease-smooth), transform 0.9s var(--ease-smooth);
+    }
+    .reveal--left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.9s var(--ease-smooth), transform 0.9s var(--ease-smooth);
+    }
+    .reveal--right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.9s var(--ease-smooth), transform 0.9s var(--ease-smooth);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .split-slider { flex-direction: column; min-height: auto; }
+      .split-slider__media { width: 100%; aspect-ratio: 4/3; }
+      .split-slider__content { padding: 2.5rem var(--gutter); }
+      .progress-timeline { grid-template-columns: 1fr; }
+      .progress-timeline__media { display: none; }
+      .collection-highlight__images { aspect-ratio: 16/9; }
+      .collection-highlight__title { font-size: clamp(2.5rem, 6vw, 4rem); }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-center { display: none; }
+      .nav-toggle { display: block; }
+      .nav-right .nav-signin { display: none; }
+      .hero-content h1 { font-size: clamp(2.4rem, 8vw, 3.5rem); }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .collection-highlight__images { aspect-ratio: 3/4; }
+      .collection-highlight__title { font-size: clamp(2rem, 8vw, 3.5rem); }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form button { position: static; width: 100%; border-radius: var(--btn-radius); height: 50px; }
+    }
+    @media (max-width: 480px) {
+      .product-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .marquee-track { animation: none; }
+    }
+  </style>
 </head>
-<body class="has-announcement">
+<body>
 
-  <!-- Announcement Bar -->
-  <div class="announcement">
-    Free shipping on orders over $50 &mdash; <a href="#shop">Shop now</a>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="#" class="nav-brand" aria-label="Hazels Organics home">
-      <img src="images/logo-dark.png" alt="Hazels Organics" class="nav-logo" width="36" height="36">
-      <span class="nav-brand-text">Hazels Organics</span>
-    </a>
-
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo text-logo">Hazel's Organics</a>
     <div class="nav-center">
       <a href="#shop">Shop</a>
-      <a href="#ingredients">Ingredients</a>
+      <a href="#collections">Collections</a>
       <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
     </div>
-
     <div class="nav-right">
-      <a href="#shop" class="nav-cart" aria-label="Cart">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <a href="#" class="nav-search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </a>
-      <a href="#shop" class="nav-cta-btn">Order Now</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="#" class="nav-signin">Sign in</a>
+      <a href="#" class="nav-cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-cart-count">0</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="#shop">Shop</a>
-    <a href="#ingredients">Ingredients</a>
+    <a href="#collections">Collections</a>
     <a href="#about">About</a>
-    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
 
-  <main>
-
-    <!-- Hero -->
-    <section class="hero" aria-label="Welcome">
-      <div class="hero-bg" aria-hidden="true">
-        <img src="images/hero-v2.png" alt="" width="1024" height="1024">
-        <div class="hero-overlay"></div>
+  <!-- Hero Carousel -->
+  <section class="hero" id="hero">
+    <div class="marquee" style="position:absolute; bottom:0; left:0; right:0; z-index:5;">
+      <div class="marquee-track">
+        <div class="marquee-item"><h3>Organic Botanicals</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Plant Wellness</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Clean Supplements</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Gut Harmony</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Organic Botanicals</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Plant Wellness</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Clean Supplements</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
+        <div class="marquee-item"><h3>Gut Harmony</h3><a href="#shop" class="btn btn--white btn--small">Shop</a></div>
       </div>
+    </div>
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=1920&fit=crop&q=80" alt="" width="1920" height="1080">
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-eyebrow">Plant-Based Wellness</span>
-        <h1>Whole body health starts <em>from within.</em></h1>
-        <p class="hero-sub">Sea moss, herbs, and plant-based wellness from people who actually use it.</p>
-        <a href="#shop" class="hero-btn">Shop Now</a>
+        <span class="subheading">Organic Wellness</span>
+        <h1>Nature&rsquo;s purest path to <em>whole body health.</em></h1>
+        <a href="#shop" class="btn btn--primary">Shop Now</a>
       </div>
-    </section>
-
-    <!-- Product Showcase -->
-    <section class="product-showcase container" id="shop">
-      <div class="product-card-large">
-        <div class="product-card-image reveal">
-          <img src="images/product-front.png" alt="Horny Sea Moss Gummies front packaging with gummies" loading="lazy">
-        </div>
-        <div class="product-card-info">
-          <span class="product-label reveal">Best Seller</span>
-          <h2 class="reveal">Horny Sea Moss Gummies</h2>
-          <p class="product-tagline reveal reveal-delay-1">Boost libido. Support stamina. Elevate energy. Sea moss meets ancient herbs in a gummy you actually want to take.</p>
-
-          <div class="product-ingredients-list reveal reveal-delay-2">
-            <div class="product-ingredient-row">
-              <span>Sea Moss</span>
-              <span>92 of 102 essential minerals</span>
-            </div>
-            <div class="product-ingredient-row">
-              <span>Tongkat Ali</span>
-              <span>Vitality and stamina support</span>
-            </div>
-            <div class="product-ingredient-row">
-              <span>Horny Goat Weed</span>
-              <span>Energy, endurance, male wellness</span>
-            </div>
-            <div class="product-ingredient-row">
-              <span>Orange</span>
-              <span>Vitamin C and antioxidants</span>
-            </div>
-          </div>
-
-          <div class="product-price-row reveal reveal-delay-2">
-            <span class="product-price">$45</span>
-            <span class="product-servings">15 gummies / 8 servings</span>
-          </div>
-
-          <div class="product-btns reveal reveal-delay-3">
-            <a href="#" class="btn-primary">Add to Cart</a>
-            <a href="#ingredients" class="btn-outline">Learn More</a>
-          </div>
-          <p class="product-note reveal reveal-delay-3">Made in USA. GMP certified. Vegan. Gluten-free.</p>
-        </div>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1546440765-e7e3c881b5fe?w=1920&fit=crop&q=80" alt="" width="1920" height="1080">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="subheading">Clean Beauty</span>
+        <h1>Radiance rooted in <em>organic balance.</em></h1>
+        <a href="#shop" class="btn btn--primary">Shop Now</a>
       </div>
-    </section>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1461468611824-46457c0e11fd?w=1920&fit=crop&q=80" alt="" width="1920" height="1080">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="subheading">Plant Powered</span>
+        <h1>Strength that grows from <em>the ground up.</em></h1>
+        <a href="#shop" class="btn btn--primary">Shop Now</a>
+      </div>
+    </div>
+    <div class="hero-dots">
+      <button class="hero-dot active" data-slide="0"></button>
+      <button class="hero-dot" data-slide="1"></button>
+      <button class="hero-dot" data-slide="2"></button>
+    </div>
+  </section>
 
-    <!-- Feature Cards -->
-    <section class="features" id="benefits">
+  <main>
+    <!-- Product Tabs -->
+    <section class="section section--lg" id="shop">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow reveal">Formulations</span>
-          <h2 class="reveal">Science-backed ingredients</h2>
-          <p class="reveal reveal-delay-1">Ancient herbs and modern nutrition in every gummy. Real ingredients, real results.</p>
+          <h2 class="reveal">Find your ritual</h2>
+        </div>
+        <div class="tabs reveal">
+          <button class="tab-btn active" data-tab="bestsellers">Best Sellers</button>
+          <button class="tab-btn" data-tab="newarrivals">New Arrivals</button>
+        </div>
+        <div class="tab-panel active" id="tab-bestsellers">
+          <div class="product-grid">
+            <div class="product-card reveal">
+              <div class="product-card-media">
+                <span class="product-badge product-badge--sale">Sale</span>
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/DailySkinSynbiotic1.webp?v=1772073726&width=800" alt="Glow Botanical" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/DailySkinSynbiotic2.webp?v=1772073726&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Glow Botanical</div>
+                <div class="product-card-price"><span class="price">$42</span><span class="compare-price">$68</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card reveal reveal-d1">
+              <div class="product-card-media">
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaEnduroFuel1597881502.webp?v=1772076404&width=800" alt="Vitality Greens" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaEnduroFuel1597881503.webp?v=1772076404&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Vitality Greens</div>
+                <div class="product-card-price"><span class="price">$46</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card reveal reveal-d2">
+              <div class="product-card-media">
+                <span class="product-badge product-badge--bestseller">Best Sellers</span>
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaPureBalance1597881490.webp?v=1772076172&width=800" alt="Inner Balance" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaPureBalance1597881491.webp?v=1772076172&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Inner Balance</div>
+                <div class="product-card-price"><span class="price">$44</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card reveal reveal-d3">
+              <div class="product-card-media">
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/DailyOmegaComplex1597881476.webp?v=1772075207&width=800" alt="Ocean Omega" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/DailyOmegaComplex1597881477.webp?v=1772075208&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Ocean Omega</div>
+                <div class="product-card-price"><span class="price">$48</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-newarrivals">
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-card-media">
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaDailyNourish1597881535.webp?v=1772077968&width=800" alt="Daily Roots" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaDailyNourish1597881537.webp?v=1772078003&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Daily Roots</div>
+                <div class="product-card-price"><span class="price">$38</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card-media">
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaShapeFuel1597881532.webp?v=1772077899&width=800" alt="Clean Energy" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaShapeFuel1597881533.webp?v=1772077899&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Clean Energy</div>
+                <div class="product-card-price"><span class="price">$40</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card-media">
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaLeanCacao1597881529.webp?v=1772077812&width=800" alt="Cacao Ritual" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaLeanCacao1597881531.webp?v=1772077834&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Cacao Ritual</div>
+                <div class="product-card-price"><span class="price">$52</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card-media">
+                <img class="primary-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaPlantProtein1597881526.webp?v=1772077752&width=800" alt="Hemp Protein" loading="lazy">
+                <img class="hover-img" src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaPlantProtein1597881527.webp?v=1772077752&width=800" alt="" loading="lazy">
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Hemp Protein</div>
+                <div class="product-card-price"><span class="price">$56</span></div>
+                <a href="#" class="btn btn--secondary btn--small" style="width:100%">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Science-backed formulations (standalone header) -->
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section-header">
+          <span class="subheading reveal">Shop Our Collections</span>
+          <h2 class="reveal">Rooted in nature, backed by science</h2>
+          <p class="reveal reveal-d1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection Highlight (full-width bg image swap) -->
+    <section class="collection-highlight reveal" id="collection-highlight">
+      <div class="collection-highlight__images">
+        <div class="collection-highlight__image active" data-index="0">
+          <img src="https://images.unsplash.com/photo-1600340053706-32d1278206ef?w=1920&fit=crop&q=80" alt="Vitality collection" loading="lazy">
+        </div>
+        <div class="collection-highlight__image" data-index="1">
+          <img src="https://images.unsplash.com/photo-1535473895227-bdecb20fb157?w=1920&fit=crop&q=80" alt="Gut Harmony collection" loading="lazy">
+        </div>
+        <div class="collection-highlight__image" data-index="2">
+          <img src="https://images.unsplash.com/photo-1610797145210-42a1a511ba4c?w=1920&fit=crop&q=80" alt="Clean Absorb collection" loading="lazy">
+        </div>
+      </div>
+      <div class="collection-highlight__content">
+        <span class="collection-highlight__subheading">our collections</span>
+        <div class="collection-highlight__titles">
+          <a href="#shop" class="collection-highlight__title active" data-index="0">Vitality</a>
+          <a href="#shop" class="collection-highlight__title" data-index="1">Gut Harmony</a>
+          <a href="#shop" class="collection-highlight__title" data-index="2">Clean Absorb</a>
+        </div>
+        <div class="collection-highlight__desc">
+          <p class="collection-highlight__desc-text active" data-index="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+          <p class="collection-highlight__desc-text" data-index="1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+          <p class="collection-highlight__desc-text" data-index="2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+          <a href="#shop" class="btn btn--primary">Shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The future of gut health -->
+    <section class="section section--lg">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="reveal">The Hazel's Organics difference</h2>
         </div>
         <div class="features-grid">
-          <div class="feature-card reveal">
-            <div class="feature-card-img">
-              <img src="images/gummies-close-v2.png" alt="Close-up of sugar-coated sea moss gummies" loading="lazy">
-            </div>
-            <div class="feature-card-body">
-              <h3>Boost Libido</h3>
-              <p>Tongkat ali and horny goat weed work together to naturally support healthy desire and drive.</p>
-              <a href="#shop" class="feature-card-link">Shop Now <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-            </div>
+          <div class="feature-item reveal">
+            <div class="feature-icon"><img src="https://pebble-wellina.myshopify.com/cdn/shop/files/icon-1.webp?v=1772617897&width=270" alt="" loading="lazy"></div>
+            <h3>Certified Organic</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit tempor.</p>
           </div>
-          <div class="feature-card reveal reveal-delay-1">
-            <div class="feature-card-img">
-              <img src="images/product-gummies-open.png" alt="Gummies spilling from copper pouch" loading="lazy">
-            </div>
-            <div class="feature-card-body">
-              <h3>Support Stamina</h3>
-              <p>92 essential minerals from sea moss fuel your body at the cellular level for sustained energy all day.</p>
-              <a href="#shop" class="feature-card-link">Shop Now <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-            </div>
+          <div class="feature-item reveal reveal-d1">
+            <div class="feature-icon"><img src="https://pebble-wellina.myshopify.com/cdn/shop/files/icon-2.webp?v=1772617894&width=270" alt="" loading="lazy"></div>
+            <h3>Plant Powered</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
           </div>
-          <div class="feature-card reveal reveal-delay-2">
-            <div class="feature-card-img">
-              <img src="images/ingredients-v2.png" alt="Raw ingredients: sea moss, tongkat ali, orange, carrot" loading="lazy">
-            </div>
-            <div class="feature-card-body">
-              <h3>Elevate Energy</h3>
-              <p>Orange and carrot provide natural vitamin C and beta-carotene for immunity and vitality.</p>
-              <a href="#shop" class="feature-card-link">Shop Now <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-            </div>
+          <div class="feature-item reveal reveal-d2">
+            <div class="feature-icon"><img src="https://pebble-wellina.myshopify.com/cdn/shop/files/icon-3.webp?v=1772617900&width=270" alt="" loading="lazy"></div>
+            <h3>Clean Energy</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+          </div>
+          <div class="feature-item reveal reveal-d3">
+            <div class="feature-icon"><img src="https://pebble-wellina.myshopify.com/cdn/shop/files/icon-4.webp?v=1772617890&width=270" alt="" loading="lazy"></div>
+            <h3>Earth First</h3>
+            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Benefits Row -->
-    <section class="benefits" id="ingredients">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow reveal">What's Inside</span>
-          <h2 class="reveal">Nothing you can't pronounce</h2>
-          <p class="reveal reveal-delay-1">Sea moss, orange, carrot, tongkat ali, horny goat weed, coconut sugar. That's it.</p>
+    <!-- Our Favorite Products — Split Slider -->
+    <section class="split-slider reveal" id="favorites">
+      <div class="split-slider__media">
+        <div class="split-slider__media-slide active" data-index="0">
+          <img src="https://images.unsplash.com/photo-1545386673-7723f55e5490?w=1200&fit=crop&q=80" alt="" loading="lazy">
+          <div class="split-slider__product-card">
+            <div class="split-slider__product-thumb">
+              <img src="https://pebble-wellina.myshopify.com/cdn/shop/files/DailyMetabolismBoost1597881470.webp?v=1772075105&width=200" alt="Morning Greens" loading="lazy">
+            </div>
+            <div class="split-slider__product-info">
+              <div class="split-slider__product-name">Morning Greens</div>
+              <div class="split-slider__product-price">$38.00</div>
+            </div>
+            <div class="split-slider__product-btn">
+              <a href="#" class="btn btn--primary btn--small">Shop</a>
+            </div>
+          </div>
         </div>
-        <div class="benefits-grid">
-          <div class="benefit-item reveal">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+        <div class="split-slider__media-slide" data-index="1">
+          <img src="https://images.unsplash.com/photo-1512767549576-fec05bcc5305?w=1200&fit=crop&q=80" alt="" loading="lazy">
+          <div class="split-slider__product-card">
+            <div class="split-slider__product-thumb">
+              <img src="https://pebble-wellina.myshopify.com/cdn/shop/files/DailyDetoxSupport1597881464.webp?v=1773654225&width=200" alt="Cleanse & Renew" loading="lazy">
             </div>
-            <h3>Sea Moss</h3>
-            <p>Naturally rich in 92 of 102 minerals. Supports immunity, digestion, and skin health. Caribbean-sourced, wildcrafted.</p>
+            <div class="split-slider__product-info">
+              <div class="split-slider__product-name">Cleanse &amp; Renew</div>
+              <div class="split-slider__product-price">$44.00</div>
+            </div>
+            <div class="split-slider__product-btn">
+              <a href="#" class="btn btn--primary btn--small">Shop</a>
+            </div>
           </div>
-          <div class="benefit-item reveal reveal-delay-1">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="split-slider__media-slide" data-index="2">
+          <img src="https://images.unsplash.com/photo-1536914629078-6fda32a00cd2?w=1200&fit=crop&q=80" alt="" loading="lazy">
+          <div class="split-slider__product-card">
+            <div class="split-slider__product-thumb">
+              <img src="https://pebble-wellina.myshopify.com/cdn/shop/files/WellinaActiveBurn1597881498.webp?v=1772076282&width=200" alt="Active Botanicals" loading="lazy">
             </div>
-            <h3>Tongkat Ali</h3>
-            <p>Used for centuries in Southeast Asian medicine to support vitality, stamina, and overall well-being.</p>
-          </div>
-          <div class="benefit-item reveal reveal-delay-2">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.364 5.636a9 9 0 11-12.728 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+            <div class="split-slider__product-info">
+              <div class="split-slider__product-name">Active Botanicals</div>
+              <div class="split-slider__product-price">$46.00</div>
             </div>
-            <h3>Horny Goat Weed</h3>
-            <p>Contains icariin, studied for its effects on blood flow. Supports energy, endurance, and male wellness.</p>
-          </div>
-          <div class="benefit-item reveal reveal-delay-3">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div class="split-slider__product-btn">
+              <a href="#" class="btn btn--primary btn--small">Shop</a>
             </div>
-            <h3>Orange + Carrot</h3>
-            <p>Rich in vitamin C and beta-carotene. Gives the gummies their natural color, flavor, and antioxidant boost.</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Gallery Strip -->
-    <section class="gallery-strip container">
-      <div class="gallery-grid">
-        <div class="gallery-item reveal">
-          <img src="images/gummies-close-v2.png" alt="Close-up of sea moss gummies" loading="lazy">
-        </div>
-        <div class="gallery-item reveal reveal-delay-1">
-          <img src="images/product-gummies-open.png" alt="Gummies spilling from pouch" loading="lazy">
-        </div>
-        <div class="gallery-item reveal reveal-delay-2">
-          <img src="images/ingredients-v2.png" alt="Raw ingredients flat lay" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow reveal">Reviews</span>
-          <h2 class="reveal">What people are saying</h2>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card reveal">
-            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-quote">"I was tired of swallowing pills every morning. Two gummies and I'm good. Noticed the difference after about five days — more energy, better focus."</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">M</div>
+      <div class="split-slider__content">
+        <div class="split-slider__heading">What Our Community Says</div>
+        <div class="split-slider__slides">
+          <div class="split-slider__content-slide active" data-index="0">
+            <p class="split-slider__quote">&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam.&rdquo;</p>
+            <div class="split-slider__author">
+              <div class="split-slider__avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&fit=crop&q=80" alt="" loading="lazy"></div>
               <div>
-                <div class="testimonial-name">Marcus T.</div>
-                <div class="testimonial-badge">Verified Customer</div>
+                <div class="split-slider__author-name">Maya Chen</div>
+                <div class="split-slider__author-badge">
+                  <svg viewBox="0 0 256 256" fill="currentColor"><path d="M128 24C107.431 24 87.323 30.1 70.221 41.527 53.118 52.955 39.788 69.197 31.917 88.201 24.045 107.204 21.986 128.115 25.998 148.289c4.013 20.174 13.918 38.705 28.463 53.25 14.544 14.545 33.075 24.45 53.25 28.463 20.174 4.013 41.085 1.953 60.088-5.919 19.004-7.871 35.246-21.201 46.674-38.304C225.901 168.677 232 148.569 232 128c-.029-27.574-10.996-54.01-30.493-73.507C182.009 34.996 155.574 24.029 128 24zm45.66 85.66l-56 56c-.743.744-1.625 1.334-2.596 1.737a7.993 7.993 0 01-6.128 0 7.997 7.997 0 01-2.596-1.737l-24-24a8.004 8.004 0 0111.32-11.32L112 148.69l50.34-50.35a8.004 8.004 0 0111.32 11.32z"/></svg>
+                  Verified Customer
+                </div>
               </div>
             </div>
           </div>
-          <div class="testimonial-card reveal reveal-delay-1">
-            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-quote">"My husband and I both take these daily. We feel more energized and the taste is actually good. Not chalky, not weird — just a clean gummy."</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">S</div>
+          <div class="split-slider__content-slide" data-index="1">
+            <p class="split-slider__quote">&ldquo;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.&rdquo;</p>
+            <div class="split-slider__author">
+              <div class="split-slider__avatar"><img src="https://images.unsplash.com/photo-1604072366595-e75dc92d6bdc?w=200&fit=crop&q=80" alt="" loading="lazy"></div>
               <div>
-                <div class="testimonial-name">Sarah K.</div>
-                <div class="testimonial-badge">Verified Customer</div>
+                <div class="split-slider__author-name">Priya Sharma</div>
+                <div class="split-slider__author-badge">
+                  <svg viewBox="0 0 256 256" fill="currentColor"><path d="M128 24C107.431 24 87.323 30.1 70.221 41.527 53.118 52.955 39.788 69.197 31.917 88.201 24.045 107.204 21.986 128.115 25.998 148.289c4.013 20.174 13.918 38.705 28.463 53.25 14.544 14.545 33.075 24.45 53.25 28.463 20.174 4.013 41.085 1.953 60.088-5.919 19.004-7.871 35.246-21.201 46.674-38.304C225.901 168.677 232 148.569 232 128c-.029-27.574-10.996-54.01-30.493-73.507C182.009 34.996 155.574 24.029 128 24zm45.66 85.66l-56 56c-.743.744-1.625 1.334-2.596 1.737a7.993 7.993 0 01-6.128 0 7.997 7.997 0 01-2.596-1.737l-24-24a8.004 8.004 0 0111.32-11.32L112 148.69l50.34-50.35a8.004 8.004 0 0111.32 11.32z"/></svg>
+                  Verified Customer
+                </div>
               </div>
             </div>
           </div>
-          <div class="testimonial-card reveal reveal-delay-2">
-            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="testimonial-quote">"Real ingredients, no filler. I checked the label before buying and was impressed — sea moss, tongkat ali, no proprietary blend nonsense. It works."</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">D</div>
+          <div class="split-slider__content-slide" data-index="2">
+            <p class="split-slider__quote">&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.&rdquo;</p>
+            <div class="split-slider__author">
+              <div class="split-slider__avatar"><img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=200&fit=crop&q=80" alt="" loading="lazy"></div>
               <div>
-                <div class="testimonial-name">David R.</div>
-                <div class="testimonial-badge">Verified Customer</div>
+                <div class="split-slider__author-name">James Ortiz</div>
+                <div class="split-slider__author-badge">
+                  <svg viewBox="0 0 256 256" fill="currentColor"><path d="M128 24C107.431 24 87.323 30.1 70.221 41.527 53.118 52.955 39.788 69.197 31.917 88.201 24.045 107.204 21.986 128.115 25.998 148.289c4.013 20.174 13.918 38.705 28.463 53.25 14.544 14.545 33.075 24.45 53.25 28.463 20.174 4.013 41.085 1.953 60.088-5.919 19.004-7.871 35.246-21.201 46.674-38.304C225.901 168.677 232 148.569 232 128c-.029-27.574-10.996-54.01-30.493-73.507C182.009 34.996 155.574 24.029 128 24zm45.66 85.66l-56 56c-.743.744-1.625 1.334-2.596 1.737a7.993 7.993 0 01-6.128 0 7.997 7.997 0 01-2.596-1.737l-24-24a8.004 8.004 0 0111.32-11.32L112 148.69l50.34-50.35a8.004 8.004 0 0111.32 11.32z"/></svg>
+                  Verified Customer
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="split-slider__controls">
+          <span class="split-slider__counter">1 / 3</span>
+          <div class="split-slider__progress"><div class="split-slider__progress-bar" style="width:33.33%"></div></div>
+          <div class="split-slider__arrows">
+            <button class="split-slider__arrow" id="splitPrev" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="split-slider__arrow" id="splitNext" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Timeline -->
-    <section class="timeline-section" id="how">
+    <!-- The future of skin health — Progress Timeline -->
+    <section class="section section--lg" id="about">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow reveal">How It Works</span>
-          <h2 class="reveal">Results that build over time</h2>
-          <p class="reveal reveal-delay-1">Take 2 gummies daily with water. Consistency is what makes it work.</p>
+          <h2 class="reveal">Your organic wellness journey</h2>
+          <p class="reveal reveal-d1">Real results that build naturally over time.</p>
         </div>
-        <div class="timeline">
-          <div class="timeline-step reveal">
-            <div class="timeline-dot">01</div>
-            <span class="timeline-label">Day 1</span>
-            <h3>Start your routine</h3>
-            <p>Take 2 gummies daily with water, any time of day. Or 45 minutes before activity for on-demand results.</p>
-          </div>
-          <div class="timeline-step reveal reveal-delay-1">
-            <div class="timeline-dot">02</div>
-            <span class="timeline-label">Week 1</span>
-            <h3>Feel the difference</h3>
-            <p>Most people notice effects within the first week — more energy, better stamina, improved focus. Stay hydrated.</p>
-          </div>
-          <div class="timeline-step reveal reveal-delay-2">
-            <div class="timeline-dot">03</div>
-            <span class="timeline-label">Week 2+</span>
-            <h3>Full results</h3>
-            <p>With consistent daily use, the full benefits compound. Maintain a healthy lifestyle for optimal performance.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About / Brand Story -->
-    <section class="features" id="about">
-      <div class="container">
-        <div class="product-card-large" style="align-items: start;">
-          <div class="product-card-image reveal">
-            <img src="images/product-clean.png" alt="Horny Sea Moss Gummies clean product shot" loading="lazy">
-          </div>
-          <div class="product-card-info">
-            <span class="product-label reveal">Our Story</span>
-            <h2 class="reveal">Harness your passion</h2>
-            <p class="product-tagline reveal reveal-delay-1">Kid Hazel built this for people who take their health seriously but don't want to swallow 15 pills a day. Two gummies. Real ingredients. Results you can feel.</p>
-            <p class="product-tagline reveal reveal-delay-2">Every batch is made in the USA, GMP certified, and third-party tested. No proprietary blends, no mystery ingredients, no filler.</p>
-            <div class="product-btns reveal reveal-delay-3">
-              <a href="#shop" class="btn-primary">Shop Now</a>
+        <div class="progress-timeline reveal">
+          <div class="progress-timeline__blocks">
+            <div class="timeline-block">
+              <div class="timeline-block__progress"></div>
+              <div class="timeline-block__content">
+                <span class="timeline-block__badge">Week 1</span>
+                <h3 class="timeline-block__title">Restore &amp; Reset</h3>
+                <p class="timeline-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
+              </div>
+            </div>
+            <div class="timeline-block">
+              <div class="timeline-block__progress"></div>
+              <div class="timeline-block__content">
+                <span class="timeline-block__badge">Week 4</span>
+                <h3 class="timeline-block__title">Feel the Shift</h3>
+                <p class="timeline-block__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+              </div>
+            </div>
+            <div class="timeline-block">
+              <div class="timeline-block__progress"></div>
+              <div class="timeline-block__content">
+                <span class="timeline-block__badge">Week 6+</span>
+                <h3 class="timeline-block__title">Thriving Naturally</h3>
+                <p class="timeline-block__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
             </div>
           </div>
+          <div class="progress-timeline__media">
+            <img src="https://images.unsplash.com/photo-1501644898242-cfea317d7faf?w=1200&fit=crop&q=80" alt="" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow reveal">Support</span>
-          <h2 class="reveal">Frequently asked questions</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item reveal">
-            <summary>How many gummies should I take?</summary>
-            <p>Take 2 gummies daily with water, or 45 minutes before activity for on-demand results. For best results, take consistently for at least 7 days.</p>
-          </details>
-          <details class="faq-item reveal reveal-delay-1">
-            <summary>When will I feel the effects?</summary>
-            <p>Most people notice effects within the first week of daily use. Energy and stamina improvements are typically the first thing you'll feel. Stay hydrated for best results.</p>
-          </details>
-          <details class="faq-item reveal reveal-delay-2">
-            <summary>Is it safe to take every day?</summary>
-            <p>Yes. Made in a GMP-certified facility in the USA and third-party tested for purity and potency. Consult your physician if pregnant, nursing, or on medication.</p>
-          </details>
-          <details class="faq-item reveal reveal-delay-3">
-            <summary>Is it vegan and gluten-free?</summary>
-            <p>Yes. 100% plant-based with no gelatin, no animal products, and no gluten. Made with coconut sugar as a natural sweetener.</p>
-          </details>
-          <details class="faq-item reveal reveal-delay-4">
-            <summary>What are the ingredients?</summary>
-            <p>Sea moss, orange, carrot, tongkat ali, horny goat weed, and coconut sugar. That's it. Nothing you can't pronounce, no proprietary blends.</p>
-          </details>
-        </div>
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="contact">
+      <div class="newsletter-bg">
+        <img src="https://images.unsplash.com/photo-1760360691010-32cf195abaa4?w=1920&fit=crop&q=80" alt="" loading="lazy">
       </div>
-    </section>
-
-    <!-- CTA / Newsletter -->
-    <section class="cta-section" id="contact">
       <div class="container">
-        <div class="cta-inner reveal">
-          <h2>Harness your passion</h2>
-          <p class="cta-sub">Two gummies a day. Real ingredients. Results you can feel.</p>
-          <a href="#shop" class="cta-btn-main">Order Now &mdash; $45</a>
-          <p class="cta-divider">or get notified about new drops</p>
-          <form class="cta-newsletter-form" id="newsletter-form">
-            <input type="email" placeholder="Email address" required autocomplete="email" aria-label="Email address">
-            <button type="submit">Subscribe</button>
+        <div class="newsletter-content reveal">
+          <h2>Join the Hazel's Organics community</h2>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required autocomplete="email" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
           </form>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-inner">
+  <footer class="footer">
+    <div class="container">
       <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-brand-row">
-            <img src="images/logo-dark.png" alt="" width="32" height="32">
-            <span>Hazels Organics</span>
-          </div>
-          <p>Organic sea moss, herbs, and plant-based wellness. Sourced clean. Made simple. Founded by Kid Hazel.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Shop</h4>
-          <a href="#shop">Horny Sea Moss Gummies</a>
-          <a href="#shop">All Products</a>
-          <a href="#ingredients">Ingredients</a>
+        <div class="footer-brand-col">
+          <div class="footer-logo text-logo" style="font-size:1.5rem;">Hazel's Organics</div>
+          <p class="footer-brand-text">Organic wellness, rooted in transparency.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="#about">Our Story</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="#">Our Story</a>
+          <a href="#">Ingredients</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Blog</a>
+          <a href="#">Find a Store</a>
         </div>
         <div class="footer-col">
-          <h4>Follow</h4>
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
-          <a href="#">Twitter</a>
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Return Policy</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Wholesale</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p>hello@hazelorganics.com</p>
+          <br>
+          <p>+1 888-HAZEL-01</p>
         </div>
       </div>
+      <hr class="footer-divider">
       <div class="footer-bottom">
-        <span>&copy; 2026 Hazels Organics. All rights reserved.</span>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" aria-label="TikTok">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.17v-3.44a4.85 4.85 0 01-3.77-1.27V6.69h3.77z"/></svg>
-          </a>
-        </div>
+        <h5>Follow Us on Instagram</h5>
+        <span>@hazelorganics</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Reveal
+      const reveals = document.querySelectorAll('.reveal');
+      const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => revealObs.observe(el));
+
+      // Nav scroll
+      const nav = document.getElementById('nav');
+      const hero = document.getElementById('hero');
+      let navScrolled = false;
+      function updateNav() {
+        const threshold = hero ? hero.offsetHeight * 0.7 : 300;
+        if (window.scrollY > threshold && !navScrolled) {
+          nav.classList.add('nav--scrolled');
+          navScrolled = true;
+        } else if (window.scrollY <= threshold && navScrolled) {
+          nav.classList.remove('nav--scrolled');
+          navScrolled = false;
+        }
+      }
+
+      // Hero carousel
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      let current = 0;
+      let heroInterval;
+
+      function reanimateContent(slide) {
+        const els = slide.querySelectorAll('.subheading, h1, .btn');
+        els.forEach(el => {
+          el.style.animation = 'none';
+          el.offsetHeight;
+          el.style.animation = '';
+        });
+      }
+      function goToSlide(i) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = i;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+        reanimateContent(slides[current]);
+      }
+      function nextSlide() { goToSlide((current + 1) % slides.length); }
+      function startHero() { heroInterval = setInterval(nextSlide, 5000); }
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          clearInterval(heroInterval);
+          goToSlide(parseInt(dot.dataset.slide));
+          startHero();
+        });
+      });
+      startHero();
+
+      // Hero parallax
+      const heroEl = document.getElementById('hero');
+      function updateParallax() {
+        const scrollY = window.scrollY;
+        const vh = window.innerHeight;
+        if (heroEl && scrollY < vh) {
+          const p = scrollY / vh;
+          const activeSlideImg = slides[current]?.querySelector('img');
+          if (activeSlideImg) {
+            activeSlideImg.style.transform = 'scale(' + (1.1 + p * 0.05) + ') translateY(' + (p * 40) + 'px)';
+          }
+          const heroContent = slides[current]?.querySelector('.hero-content');
+          if (heroContent) {
+            heroContent.style.opacity = 1 - p * 1.2;
+            heroContent.style.transform = 'translateY(' + (p * 60) + 'px)';
+          }
+        }
+      }
+
+      // Tabs
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+          document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        });
+      });
+
+      // Collection Highlight — background image swap on hover
+      const chTitles = document.querySelectorAll('.collection-highlight__title');
+      const chImages = document.querySelectorAll('.collection-highlight__image');
+      const chDescs = document.querySelectorAll('.collection-highlight__desc-text');
+      chTitles.forEach(title => {
+        title.addEventListener('mouseenter', () => {
+          const idx = title.dataset.index;
+          chTitles.forEach(t => t.classList.remove('active'));
+          chImages.forEach(img => img.classList.remove('active'));
+          chDescs.forEach(d => d.classList.remove('active'));
+          title.classList.add('active');
+          chImages[idx]?.classList.add('active');
+          chDescs[idx]?.classList.add('active');
+        });
+      });
+
+      // Split Slider
+      const splitMediaSlides = document.querySelectorAll('.split-slider__media-slide');
+      const splitContentSlides = document.querySelectorAll('.split-slider__content-slide');
+      const splitCounter = document.querySelector('.split-slider__counter');
+      const splitProgress = document.querySelector('.split-slider__progress-bar');
+      const splitPrev = document.getElementById('splitPrev');
+      const splitNext = document.getElementById('splitNext');
+      let splitCurrent = 0;
+      const splitTotal = splitMediaSlides.length;
+      let splitInterval;
+
+      function goToSplit(i) {
+        splitMediaSlides[splitCurrent].classList.remove('active');
+        splitContentSlides[splitCurrent].classList.remove('active');
+        splitCurrent = ((i % splitTotal) + splitTotal) % splitTotal;
+        splitMediaSlides[splitCurrent].classList.add('active');
+        splitContentSlides[splitCurrent].classList.add('active');
+        splitCounter.textContent = (splitCurrent + 1) + ' / ' + splitTotal;
+        splitProgress.style.width = ((splitCurrent + 1) / splitTotal * 100) + '%';
+      }
+      function startSplit() { splitInterval = setInterval(() => goToSplit(splitCurrent + 1), 5000); }
+      function resetSplit() { clearInterval(splitInterval); startSplit(); }
+
+      splitPrev.addEventListener('click', () => { goToSplit(splitCurrent - 1); resetSplit(); });
+      splitNext.addEventListener('click', () => { goToSplit(splitCurrent + 1); resetSplit(); });
+      startSplit();
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          const id = anchor.getAttribute('href');
+          if (id === '#') return;
+          const target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            closeMobile();
+            const offset = nav.offsetHeight + 20;
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Mobile menu
+      const toggle = document.getElementById('navToggle');
+      const mobile = document.getElementById('mobileMenu');
+      let menuOpen = false;
+      function openMobile() { menuOpen = true; toggle.classList.add('active'); mobile.classList.add('open'); document.body.style.overflow = 'hidden'; }
+      function closeMobile() { menuOpen = false; toggle.classList.remove('active'); mobile.classList.remove('open'); document.body.style.overflow = ''; }
+      toggle.addEventListener('click', () => { menuOpen ? closeMobile() : openMobile(); });
+      mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobile));
+
+      // Newsletter
+      const form = document.getElementById('newsletterForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const input = form.querySelector('input');
+          input.value = '';
+          input.placeholder = "You're in! Check your inbox.";
+        });
+      }
+
+      // Scroll handler
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => { updateNav(); updateParallax(); ticking = false; });
+          ticking = true;
+        }
+      }, { passive: true });
+      updateNav();
+      updateParallax();
+    });
+  </script>
 </body>
 </html>
