@@ -1,12 +1,12 @@
 /* ========================================
-   Hazel Organics — main.js
-   Scroll animations, parallax, nav, mobile menu
+   Hazels Organics — main.js
+   Scroll reveals, nav, mobile menu, parallax
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // — Scroll reveal (Intersection Observer) —
-  const revealElements = document.querySelectorAll('.reveal, .reveal-image');
+  // — Scroll Reveal (IntersectionObserver) —
+  const revealElements = document.querySelectorAll('.reveal');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -60px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -50px 0px'
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
@@ -25,11 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // — Nav scroll state —
   const nav = document.querySelector('.nav');
   const hero = document.querySelector('.hero');
+  const announcement = document.querySelector('.announcement');
   let navScrolled = false;
 
   function updateNav() {
     const scrollY = window.scrollY;
-    const threshold = hero ? hero.offsetHeight * 0.7 : 100;
+    const threshold = hero ? hero.offsetHeight * 0.6 : 100;
 
     if (scrollY > threshold && !navScrolled) {
       nav.classList.add('scrolled');
@@ -38,31 +39,27 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('scrolled');
       navScrolled = false;
     }
+
+    if (announcement) {
+      if (scrollY > 40) {
+        document.body.classList.remove('has-announcement');
+      } else {
+        document.body.classList.add('has-announcement');
+      }
+    }
   }
 
-  // — Parallax on hero bg and product images —
+  // — Hero parallax —
   const heroBg = document.querySelector('.hero-bg');
-  const parallaxImages = document.querySelectorAll('.product-img-inner, .story-img-inner');
 
   function updateParallax() {
     const scrollY = window.scrollY;
     const vh = window.innerHeight;
 
-    if (heroBg) {
-      const heroProgress = Math.min(scrollY / vh, 1);
-      heroBg.style.transform = `translateY(${heroProgress * 80}px) scale(${1 + heroProgress * 0.05})`;
+    if (heroBg && scrollY < vh) {
+      const progress = scrollY / vh;
+      heroBg.style.transform = `translateY(${progress * 60}px) scale(${1 + progress * 0.04})`;
     }
-
-    parallaxImages.forEach(img => {
-      const rect = img.parentElement.getBoundingClientRect();
-      const visible = rect.top < vh && rect.bottom > 0;
-
-      if (visible) {
-        const progress = (vh - rect.top) / (vh + rect.height);
-        const offset = (progress - 0.5) * 60;
-        img.style.transform = `translateY(${offset}px)`;
-      }
-    });
   }
 
   // — Smooth scroll for anchor links —
@@ -74,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         e.preventDefault();
         closeMobileMenu();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const offset = nav.offsetHeight + 20;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
@@ -87,14 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function openMobileMenu() {
     menuOpen = true;
     toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
     mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMobileMenu() {
     menuOpen = false;
     toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
     mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
@@ -107,6 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileMenu?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
+
+  // — Newsletter form —
+  const form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = form.querySelector('input');
+      const btn = form.querySelector('button');
+      input.value = '';
+      input.placeholder = "You're in!";
+      btn.textContent = 'Done';
+      btn.style.background = 'var(--accent)';
+    });
+  }
 
   // — RAF scroll handler —
   let ticking = false;

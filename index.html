@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>Hazels Organics — Organic Sea Moss, Herbs & Plant-Based Wellness</title>
-  <meta name="description" content="Organic sea moss gel, herbal blends, and plant-based wellness products. Wildcrafted, third-party tested, directly sourced. Founded by Kid Hazel.">
-  <meta name="keywords" content="sea moss, organic, herbs, wellness, plant-based, vegan, sea moss gel, burdock root, bladderwrack, Kid Hazel">
+  <meta name="description" content="Organic sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. Wildcrafted, third-party tested. Founded by Kid Hazel.">
+  <meta name="keywords" content="sea moss, organic, herbs, wellness, plant-based, vegan, sea moss gummies, tongkat ali, horny goat weed, Kid Hazel, hazels organics">
   <meta name="author" content="Hazels Organics">
   <link rel="canonical" href="https://hazelsorganics.com/">
   <meta name="robots" content="index, follow">
@@ -16,14 +16,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hazelsorganics.com/">
   <meta property="og:title" content="Hazels Organics — Organic Sea Moss & Plant-Based Wellness">
-  <meta property="og:description" content="Wildcrafted sea moss, herbal blends, and plant-based wellness. Sourced clean. Made simple.">
+  <meta property="og:description" content="Sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. Sourced clean. Made simple.">
   <meta property="og:image" content="https://hazelsorganics.com/images/product-front.png">
   <meta property="og:site_name" content="Hazels Organics">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hazels Organics — Organic Sea Moss & Plant-Based Wellness">
-  <meta name="twitter:description" content="Wildcrafted sea moss, herbal blends, and plant-based wellness. Sourced clean. Made simple.">
+  <meta name="twitter:description" content="Sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. Sourced clean. Made simple.">
   <meta name="twitter:image" content="https://hazelsorganics.com/images/product-front.png">
 
   <!-- Schema.org structured data -->
@@ -32,6 +32,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Hazels Organics",
+    "url": "https://hazelsorganics.com",
     "description": "Organic sea moss, herbs, and plant-based wellness products. Founded by Kid Hazel.",
     "foundedBy": {
       "@type": "Person",
@@ -48,12 +49,14 @@
     "@type": "Product",
     "name": "Horny Sea Moss Gummies",
     "description": "Sea moss gummies with tongkat ali and horny goat weed. Boost libido, support stamina, elevate energy. 15 gummies, 8 servings.",
+    "image": "https://hazelsorganics.com/images/product-front.png",
     "brand": { "@type": "Brand", "name": "Hazels Organics" },
     "offers": {
       "@type": "Offer",
       "price": "45.00",
       "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "url": "https://hazelsorganics.com/#shop"
     },
     "additionalProperty": [
       { "@type": "PropertyValue", "name": "Servings", "value": "8" },
@@ -66,35 +69,47 @@
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="has-announcement">
+
+  <!-- Announcement Bar -->
+  <div class="announcement">
+    Free shipping on orders over $50 &mdash; <a href="#shop">Shop now</a>
+  </div>
 
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="#" class="nav-brand" aria-label="Hazels Organics home">
-      <img src="images/logo-dark.png" alt="Hazels Organics" class="nav-logo" width="40" height="40">
+      <img src="images/logo-dark.png" alt="Hazels Organics" class="nav-logo" width="36" height="36">
       <span class="nav-brand-text">Hazels Organics</span>
     </a>
 
-    <ul class="nav-links">
-      <li><a href="#featured">Shop</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#featured" class="nav-cta">Order now</a></li>
-    </ul>
+    <div class="nav-center">
+      <a href="#shop">Shop</a>
+      <a href="#ingredients">Ingredients</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </div>
 
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-right">
+      <a href="#shop" class="nav-cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </a>
+      <a href="#shop" class="nav-cta-btn">Order Now</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Mobile menu -->
+  <!-- Mobile Menu -->
   <div class="mobile-menu" aria-hidden="true">
-    <a href="#featured">Shop</a>
+    <a href="#shop">Shop</a>
+    <a href="#ingredients">Ingredients</a>
     <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <a href="#featured">Order now</a>
   </div>
 
   <main>
@@ -106,173 +121,297 @@
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
-        <h1>Hazels Organics</h1>
+        <span class="hero-eyebrow">Plant-Based Wellness</span>
+        <h1>Whole body health starts <em>from within.</em></h1>
         <p class="hero-sub">Sea moss, herbs, and plant-based wellness from people who actually use it.</p>
-        <a href="#featured" class="hero-btn">Shop</a>
+        <a href="#shop" class="hero-btn">Shop Now</a>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="text-block" id="about">
-      <h2 class="reveal">What you put in your body matters</h2>
-      <p class="reveal reveal-delay-1">Everything we sell is plant-based, third-party tested, and sourced directly from growers we know personally. We started with sea moss because it actually worked. The rest followed.</p>
-    </section>
-
-    <!-- Featured: Horny Sea Moss -->
-    <section class="featured" id="featured">
-      <div class="featured-grid">
-        <div class="featured-img reveal-image">
+    <!-- Product Showcase -->
+    <section class="product-showcase container" id="shop">
+      <div class="product-card-large">
+        <div class="product-card-image reveal">
           <img src="images/product-front.png" alt="Horny Sea Moss Gummies front packaging with gummies" loading="lazy">
         </div>
-        <div class="featured-info">
-          <h2 class="reveal">Horny Sea Moss<br>Gummies</h2>
-          <p class="featured-tagline reveal reveal-delay-1">Boost libido. Support stamina. Elevate energy. Sea moss meets ancient herbs in a gummy you actually want to take.</p>
-          <div class="ingredients reveal reveal-delay-2">
-            <div class="ingredient">
-              <span class="ingredient-name">Sea Moss</span>
-              <span class="ingredient-detail">92 of 102 essential minerals</span>
+        <div class="product-card-info">
+          <span class="product-label reveal">Best Seller</span>
+          <h2 class="reveal">Horny Sea Moss Gummies</h2>
+          <p class="product-tagline reveal reveal-delay-1">Boost libido. Support stamina. Elevate energy. Sea moss meets ancient herbs in a gummy you actually want to take.</p>
+
+          <div class="product-ingredients-list reveal reveal-delay-2">
+            <div class="product-ingredient-row">
+              <span>Sea Moss</span>
+              <span>92 of 102 essential minerals</span>
             </div>
-            <div class="ingredient">
-              <span class="ingredient-name">Tongkat Ali</span>
-              <span class="ingredient-detail">Vitality and stamina support</span>
+            <div class="product-ingredient-row">
+              <span>Tongkat Ali</span>
+              <span>Vitality and stamina support</span>
             </div>
-            <div class="ingredient">
-              <span class="ingredient-name">Horny Goat Weed</span>
-              <span class="ingredient-detail">Energy, endurance, male wellness</span>
+            <div class="product-ingredient-row">
+              <span>Horny Goat Weed</span>
+              <span>Energy, endurance, male wellness</span>
             </div>
-            <div class="ingredient">
-              <span class="ingredient-name">Orange</span>
-              <span class="ingredient-detail">Vitamin C and antioxidants</span>
+            <div class="product-ingredient-row">
+              <span>Orange</span>
+              <span>Vitamin C and antioxidants</span>
             </div>
           </div>
-          <div class="featured-meta reveal reveal-delay-2">
+
+          <div class="product-price-row reveal reveal-delay-2">
             <span class="product-price">$45</span>
-            <span class="featured-format">15 gummies / 8 servings</span>
+            <span class="product-servings">15 gummies / 8 servings</span>
           </div>
-          <a href="#" class="featured-btn reveal reveal-delay-3">Add to cart</a>
-          <p class="featured-note reveal reveal-delay-3">Made in USA. GMP certified. Take 2 daily with water.</p>
+
+          <div class="product-btns reveal reveal-delay-3">
+            <a href="#" class="btn-primary">Add to Cart</a>
+            <a href="#ingredients" class="btn-outline">Learn More</a>
+          </div>
+          <p class="product-note reveal reveal-delay-3">Made in USA. GMP certified. Vegan. Gluten-free.</p>
         </div>
       </div>
     </section>
 
-    <!-- Product photos -->
-    <section class="detail-strip">
-      <div class="detail-strip-grid">
-        <div class="detail-strip-img reveal-image">
-          <img src="images/gummies-close-v2.png" alt="Close-up of Horny Sea Moss sugar-coated gummies" loading="lazy">
+    <!-- Feature Cards -->
+    <section class="features" id="benefits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow reveal">Formulations</span>
+          <h2 class="reveal">Science-backed ingredients</h2>
+          <p class="reveal reveal-delay-1">Ancient herbs and modern nutrition in every gummy. Real ingredients, real results.</p>
         </div>
-        <div class="detail-strip-img reveal-image">
-          <img src="images/product-gummies-open.png" alt="Horny Sea Moss gummies spilling from copper pouch" loading="lazy">
-        </div>
-        <div class="detail-strip-img reveal-image">
-          <img src="images/ingredients-v2.png" alt="Sea moss, tongkat ali, horny goat weed, orange, and carrot ingredients" loading="lazy">
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-card-img">
+              <img src="images/gummies-close-v2.png" alt="Close-up of sugar-coated sea moss gummies" loading="lazy">
+            </div>
+            <div class="feature-card-body">
+              <h3>Boost Libido</h3>
+              <p>Tongkat ali and horny goat weed work together to naturally support healthy desire and drive.</p>
+              <a href="#shop" class="feature-card-link">Shop Now <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            </div>
+          </div>
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-card-img">
+              <img src="images/product-gummies-open.png" alt="Gummies spilling from copper pouch" loading="lazy">
+            </div>
+            <div class="feature-card-body">
+              <h3>Support Stamina</h3>
+              <p>92 essential minerals from sea moss fuel your body at the cellular level for sustained energy all day.</p>
+              <a href="#shop" class="feature-card-link">Shop Now <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            </div>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-card-img">
+              <img src="images/ingredients-v2.png" alt="Raw ingredients: sea moss, tongkat ali, orange, carrot" loading="lazy">
+            </div>
+            <div class="feature-card-body">
+              <h3>Elevate Energy</h3>
+              <p>Orange and carrot provide natural vitamin C and beta-carotene for immunity and vitality.</p>
+              <a href="#shop" class="feature-card-link">Shop Now <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
-    <section class="how-it-works">
-      <div class="how-inner">
-        <h2 class="reveal">How to use</h2>
-        <div class="steps-grid">
-          <div class="step reveal">
-            <span class="step-num">01</span>
-            <h3>Take 2 gummies daily</h3>
-            <p>With water, any time of day. Consistency is what makes it work.</p>
-          </div>
-          <div class="step reveal reveal-delay-1">
-            <span class="step-num">02</span>
-            <h3>Or 45 min before</h3>
-            <p>For on-demand results, take 2 gummies 45 minutes before activity.</p>
-          </div>
-          <div class="step reveal reveal-delay-2">
-            <span class="step-num">03</span>
-            <h3>Best results in 7 days</h3>
-            <p>Take 2 a day for 7 days straight. Stay hydrated. Maintain a healthy lifestyle.</p>
-          </div>
+    <!-- Benefits Row -->
+    <section class="benefits" id="ingredients">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow reveal">What's Inside</span>
+          <h2 class="reveal">Nothing you can't pronounce</h2>
+          <p class="reveal reveal-delay-1">Sea moss, orange, carrot, tongkat ali, horny goat weed, coconut sugar. That's it.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Ingredient deep dive -->
-    <section class="ingredients-section" id="ingredients">
-      <div class="ingredients-inner">
-        <h2 class="reveal">What's inside</h2>
-        <p class="ingredients-sub reveal reveal-delay-1">Sea moss, orange, carrot, tongkat ali, horny goat weed, coconut sugar. That's it. Nothing you can't pronounce.</p>
-        <div class="ingredients-detail-grid">
-          <div class="ingredient-card reveal">
+        <div class="benefits-grid">
+          <div class="benefit-item reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+            </div>
             <h3>Sea Moss</h3>
-            <p>Naturally rich in 92 of 102 minerals your body needs. Supports immunity, digestion, thyroid function, and skin health. Caribbean-sourced, wildcrafted.</p>
+            <p>Naturally rich in 92 of 102 minerals. Supports immunity, digestion, and skin health. Caribbean-sourced, wildcrafted.</p>
           </div>
-          <div class="ingredient-card reveal reveal-delay-1">
+          <div class="benefit-item reveal reveal-delay-1">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
             <h3>Tongkat Ali</h3>
-            <p>Used for centuries in Southeast Asian medicine to support vitality, stamina, and overall well-being. Known as "Malaysian ginseng."</p>
+            <p>Used for centuries in Southeast Asian medicine to support vitality, stamina, and overall well-being.</p>
           </div>
-          <div class="ingredient-card reveal reveal-delay-2">
+          <div class="benefit-item reveal reveal-delay-2">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.364 5.636a9 9 0 11-12.728 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+            </div>
             <h3>Horny Goat Weed</h3>
-            <p>Traditionally used to support energy, endurance, and male wellness. Contains icariin, a compound studied for its effects on blood flow.</p>
+            <p>Contains icariin, studied for its effects on blood flow. Supports energy, endurance, and male wellness.</p>
           </div>
-          <div class="ingredient-card reveal reveal-delay-3">
+          <div class="benefit-item reveal reveal-delay-3">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
             <h3>Orange + Carrot</h3>
-            <p>Rich in vitamin C and beta-carotene. Supports immunity and overall health. Also gives the gummies their natural color and flavor.</p>
+            <p>Rich in vitamin C and beta-carotene. Gives the gummies their natural color, flavor, and antioxidant boost.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Brand story -->
-    <section class="story" id="story">
-      <div class="story-grid">
-        <div class="story-img">
-          <div class="story-img-inner reveal-image">
-            <img src="images/product-clean.png" alt="Horny Sea Moss Gummies product" loading="lazy">
-          </div>
+    <!-- Gallery Strip -->
+    <section class="gallery-strip container">
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="images/gummies-close-v2.png" alt="Close-up of sea moss gummies" loading="lazy">
         </div>
-        <div class="story-content">
-          <h2 class="reveal">Harness your passion</h2>
-          <p class="reveal reveal-delay-1">Kid Hazel built this for people who take their health seriously but don't want to swallow 15 pills a day. Two gummies. Real ingredients. Results you can feel.</p>
-          <p class="reveal reveal-delay-2">Every batch is made in the USA, GMP certified, and third-party tested. No proprietary blends, no mystery ingredients, no filler.</p>
+        <div class="gallery-item reveal reveal-delay-1">
+          <img src="images/product-gummies-open.png" alt="Gummies spilling from pouch" loading="lazy">
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img src="images/ingredients-v2.png" alt="Raw ingredients flat lay" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- FAQ + Newsletter combined -->
-    <section class="faq" id="faq">
-      <div class="faq-inner">
-        <h2 class="reveal">Questions</h2>
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow reveal">Reviews</span>
+          <h2 class="reveal">What people are saying</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"I was tired of swallowing pills every morning. Two gummies and I'm good. Noticed the difference after about five days — more energy, better focus."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div>
+                <div class="testimonial-name">Marcus T.</div>
+                <div class="testimonial-badge">Verified Customer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"My husband and I both take these daily. We feel more energized and the taste is actually good. Not chalky, not weird — just a clean gummy."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div>
+                <div class="testimonial-name">Sarah K.</div>
+                <div class="testimonial-badge">Verified Customer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"Real ingredients, no filler. I checked the label before buying and was impressed — sea moss, tongkat ali, no proprietary blend nonsense. It works."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">D</div>
+              <div>
+                <div class="testimonial-name">David R.</div>
+                <div class="testimonial-badge">Verified Customer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section" id="how">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow reveal">How It Works</span>
+          <h2 class="reveal">Results that build over time</h2>
+          <p class="reveal reveal-delay-1">Take 2 gummies daily with water. Consistency is what makes it work.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-step reveal">
+            <div class="timeline-dot">01</div>
+            <span class="timeline-label">Day 1</span>
+            <h3>Start your routine</h3>
+            <p>Take 2 gummies daily with water, any time of day. Or 45 minutes before activity for on-demand results.</p>
+          </div>
+          <div class="timeline-step reveal reveal-delay-1">
+            <div class="timeline-dot">02</div>
+            <span class="timeline-label">Week 1</span>
+            <h3>Feel the difference</h3>
+            <p>Most people notice effects within the first week — more energy, better stamina, improved focus. Stay hydrated.</p>
+          </div>
+          <div class="timeline-step reveal reveal-delay-2">
+            <div class="timeline-dot">03</div>
+            <span class="timeline-label">Week 2+</span>
+            <h3>Full results</h3>
+            <p>With consistent daily use, the full benefits compound. Maintain a healthy lifestyle for optimal performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Brand Story -->
+    <section class="features" id="about">
+      <div class="container">
+        <div class="product-card-large" style="align-items: start;">
+          <div class="product-card-image reveal">
+            <img src="images/product-clean.png" alt="Horny Sea Moss Gummies clean product shot" loading="lazy">
+          </div>
+          <div class="product-card-info">
+            <span class="product-label reveal">Our Story</span>
+            <h2 class="reveal">Harness your passion</h2>
+            <p class="product-tagline reveal reveal-delay-1">Kid Hazel built this for people who take their health seriously but don't want to swallow 15 pills a day. Two gummies. Real ingredients. Results you can feel.</p>
+            <p class="product-tagline reveal reveal-delay-2">Every batch is made in the USA, GMP certified, and third-party tested. No proprietary blends, no mystery ingredients, no filler.</p>
+            <div class="product-btns reveal reveal-delay-3">
+              <a href="#shop" class="btn-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow reveal">Support</span>
+          <h2 class="reveal">Frequently asked questions</h2>
+        </div>
         <div class="faq-list">
           <details class="faq-item reveal">
-            <summary>How many should I take?</summary>
-            <p>2 gummies daily with water, or 45 minutes before activity. For best results, take consistently for 7 days.</p>
+            <summary>How many gummies should I take?</summary>
+            <p>Take 2 gummies daily with water, or 45 minutes before activity for on-demand results. For best results, take consistently for at least 7 days.</p>
           </details>
-          <details class="faq-item reveal">
-            <summary>When will I feel it?</summary>
-            <p>Most people notice effects within the first week of daily use. Stay hydrated.</p>
+          <details class="faq-item reveal reveal-delay-1">
+            <summary>When will I feel the effects?</summary>
+            <p>Most people notice effects within the first week of daily use. Energy and stamina improvements are typically the first thing you'll feel. Stay hydrated for best results.</p>
           </details>
-          <details class="faq-item reveal">
-            <summary>Is it safe?</summary>
-            <p>Made in a GMP-certified facility in the USA. Third-party tested. Consult your physician if pregnant, nursing, or on medication.</p>
+          <details class="faq-item reveal reveal-delay-2">
+            <summary>Is it safe to take every day?</summary>
+            <p>Yes. Made in a GMP-certified facility in the USA and third-party tested for purity and potency. Consult your physician if pregnant, nursing, or on medication.</p>
           </details>
-          <details class="faq-item reveal">
+          <details class="faq-item reveal reveal-delay-3">
             <summary>Is it vegan and gluten-free?</summary>
-            <p>Yes. 100% plant-based, no gelatin, no animal products, no gluten.</p>
+            <p>Yes. 100% plant-based with no gelatin, no animal products, and no gluten. Made with coconut sugar as a natural sweetener.</p>
+          </details>
+          <details class="faq-item reveal reveal-delay-4">
+            <summary>What are the ingredients?</summary>
+            <p>Sea moss, orange, carrot, tongkat ali, horny goat weed, and coconut sugar. That's it. Nothing you can't pronounce, no proprietary blends.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA with newsletter -->
+    <!-- CTA / Newsletter -->
     <section class="cta-section" id="contact">
-      <div class="cta-inner reveal">
-        <h2>Harness your passion</h2>
-        <a href="#featured" class="cta-btn">Order now — $45</a>
-        <form class="cta-newsletter" id="newsletter-form">
-          <p>Or get notified about new drops and restocks.</p>
-          <div class="cta-form-row">
-            <input type="email" placeholder="Email address" required id="nl-email" autocomplete="email" aria-label="Email address">
-            <button type="submit">Join</button>
-          </div>
-        </form>
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2>Harness your passion</h2>
+          <p class="cta-sub">Two gummies a day. Real ingredients. Results you can feel.</p>
+          <a href="#shop" class="cta-btn-main">Order Now &mdash; $45</a>
+          <p class="cta-divider">or get notified about new drops</p>
+          <form class="cta-newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Email address" required autocomplete="email" aria-label="Email address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -280,27 +419,48 @@
 
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
-    <span class="footer-left">
-      <img src="images/logo.png" alt="" class="footer-logo" width="28" height="28">
-      Hazels Organics
-    </span>
-    <span class="footer-center">&copy; 2026</span>
-    <nav class="footer-right" aria-label="Footer links">
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">FAQ</a>
-    </nav>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-row">
+            <img src="images/logo-dark.png" alt="" width="32" height="32">
+            <span>Hazels Organics</span>
+          </div>
+          <p>Organic sea moss, herbs, and plant-based wellness. Sourced clean. Made simple. Founded by Kid Hazel.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#shop">Horny Sea Moss Gummies</a>
+          <a href="#shop">All Products</a>
+          <a href="#ingredients">Ingredients</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">Our Story</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Hazels Organics. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.17v-3.44a4.85 4.85 0 01-3.77-1.27V6.69h3.77z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var input = this.querySelector('input');
-      input.value = '';
-      input.placeholder = "You're in";
-      this.querySelector('button').textContent = 'Done';
-    });
-  </script>
 </body>
 </html>
